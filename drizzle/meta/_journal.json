@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1693143915856,
+      "tag": "0000_peaceful_post",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1693145664483,
+      "tag": "0001_burly_mathemanic",
+      "breakpoints": true
+    }
+  ]
+}
