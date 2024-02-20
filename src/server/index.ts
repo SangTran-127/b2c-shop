@@ -9,18 +9,6 @@ export const db = drizzle(sql);
 
 migrate(db, { migrationsFolder: "drizzle" });
 
-// export async function seed() {
-//   const insertedUsers: User[] = await db
-//     .insert(users)
-//     .values(newUsers)
-//     .returning();
-//   console.log(`Seeded ${insertedUsers.length} users`);
-
-//   return {
-//     insertedUsers,
-//   };
-// }
-
 export const appRouter = router({
   user: userRouter,
 });

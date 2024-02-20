@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 // import { buttonVariants } from "@/registry/new-york/ui/button";
-import { UserAuthForm } from "../_components/UserAuthForm";
+import { UserAuthForm } from "../../components/UserAuthForm";
 
 export const metadata: Metadata = {
   title: "Authentication",
