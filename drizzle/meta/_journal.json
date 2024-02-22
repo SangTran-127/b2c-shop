@@ -15,6 +15,13 @@
       "when": 1693145664483,
       "tag": "0001_burly_mathemanic",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1708547504831,
+      "tag": "0002_safe_omega_flight",
+      "breakpoints": true
     }
   ]
 }

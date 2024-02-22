@@ -1,11 +1,15 @@
 import { router } from "./trpc";
-import { migrate } from "drizzle-orm/vercel-postgres/migrator";
-import { drizzle } from "drizzle-orm/vercel-postgres";
+import { migrate } from "drizzle-orm/node-postgres/migrator";
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Client } from "pg";
 
-import { sql } from "@vercel/postgres";
 import { userRouter } from "./user/router";
 
-export const db = drizzle(sql);
+const client = new Client({
+  connectionString: "postgres://postgres:mysecretpassword@localhost:5432/shop",
+});
+
+export const db = drizzle(client);
 
 migrate(db, { migrationsFolder: "drizzle" });
 
