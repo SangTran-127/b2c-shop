@@ -1,6 +1,6 @@
-import { NewUser, users } from "@/db/schema";
-import { db } from "..";
-import { router, publicProcedure } from "../trpc";
+import { NewUser, users } from "@/db/schema/users";
+import { db } from "../..";
+import { router, publicProcedure } from "../../trpc";
 import { z } from "zod";
 
 const newUsers: NewUser[] = [

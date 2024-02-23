@@ -24,6 +24,7 @@ import {
 } from "@/ui-components/ui/tabs";
 import React, { useEffect, useState } from "react";
 import LoginForm from "../form/login";
+import RegisterForm from "../form/register";
 
 const AuthenticationTab = () => {
   const [status, setStatus] = useState<"login" | "register">("login");
@@ -44,7 +45,27 @@ const AuthenticationTab = () => {
         <DialogContent className="sm:max-w-[425px]">
           <TabStatus status={status} />
           <DialogFooter>
-            <Button onClick={handleToggleStatus}>switch</Button>
+            {status === "login" ? (
+              <div className="flex items-center gap-3 px-6">
+                <p>Don&apos;t have an account?</p>
+                <button
+                  onClick={handleToggleStatus}
+                  className="text-[#0f172a] font-medium underline"
+                >
+                  Register
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3 px-6">
+                <p>Do you have an account?</p>
+                <button
+                  onClick={handleToggleStatus}
+                  className="text-[#0f172a] font-medium underline"
+                >
+                  Login
+                </button>
+              </div>
+            )}
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -72,18 +93,7 @@ const TabStatus = ({ status }: { status: "login" | "register" }) => {
             <CardTitle>Register</CardTitle>
           </CardHeader>
           <CardContent>
-            <form>
-              <div className="grid items-center gap-4">
-                <Input id="email" type="email" placeholder="Email" />
-                <Input id="password" type="password" placeholder="Password" />
-                <Input
-                  id="confirm-password"
-                  type="password"
-                  placeholder="Confirm password"
-                />
-                <Button>Register</Button>
-              </div>
-            </form>
+            <RegisterForm />
           </CardContent>
         </Card>
       )}

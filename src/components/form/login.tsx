@@ -6,7 +6,7 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
+  FormMessage,
 } from "@/ui-components/ui/form";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -30,7 +30,9 @@ const LoginForm = () => {
     },
   });
 
-  const onSubmit = () => {};
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+  };
 
   return (
     <Form {...form}>
@@ -43,6 +45,7 @@ const LoginForm = () => {
               <FormControl>
                 <Input placeholder="Email" type="email" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -54,10 +57,13 @@ const LoginForm = () => {
               <FormControl>
                 <Input placeholder="Password" type="password" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" content="Login" />
+        <Button type="submit" className="w-full">
+          Login
+        </Button>
       </form>
     </Form>
   );
