@@ -4,7 +4,7 @@ import { categories } from "./category";
 
 export const products = pgTable("products", {
   id: serial("id").primaryKey(),
-  name: text("name").notNull(),
+  name: text("name").notNull().unique(),
   thumbnail: text("thumbnail").notNull(),
   price: numeric("price").notNull(),
   category_id: integer("category_id")
@@ -13,7 +13,7 @@ export const products = pgTable("products", {
 });
 
 export const productRelations = relations(products, ({ one }) => ({
-  author: one(categories, {
+  category: one(categories, {
     fields: [products.category_id],
     references: [categories.id],
   }),
