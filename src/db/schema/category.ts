@@ -1,6 +1,6 @@
 import { relations } from "drizzle-orm";
 import { serial, text, pgTable } from "drizzle-orm/pg-core";
-import { products } from "./products";
+// import { products } from "./products";
 
 export const categories = pgTable("categories", {
   id: serial("id").primaryKey(),
@@ -9,10 +9,10 @@ export const categories = pgTable("categories", {
   ),
   name: text("name").notNull().unique(),
 });
-export const categoryRelations = relations(categories, ({ many }) => ({
-  // product_detail: one(productDetail),
-  products: many(products),
-}));
+// export const categoryRelations = relations(categories, ({ many }) => ({
+//   // product_detail: one(productDetail),
+//   products: many(products),
+// }));
 
 export type Category = typeof categories.$inferSelect;
 export type NewCategory = typeof categories.$inferInsert;

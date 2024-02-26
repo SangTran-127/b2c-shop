@@ -1,0 +1,52 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "78b4c394-c0a6-4c40-918a-df25f506862f",
+  "prevId": "d8412c94-be00-4203-b5ba-d75edb2cd212",
+  "tables": {
+    "categories": {
+      "name": "categories",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "image_url": {
+          "name": "image_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'https://massdrop-s3.imgix.net/img_site/shop_by_category/AMPS-desktop.jpg?auto=format&fm=jpg&fit=crop&w=450&h=450&dpr=1&chromasub=444&q=70'"
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "categories_name_unique": {
+          "name": "categories_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}

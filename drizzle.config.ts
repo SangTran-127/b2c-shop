@@ -8,6 +8,6 @@ export default {
   driver: "pg",
   dbCredentials: {
     connectionString:
-      "postgres://postgres:mysecretpassword@localhost:5432/shop",
+      "postgresql://transang:transang@localhost:5432/codergang_shop" || "",
   },
 } satisfies Config;
