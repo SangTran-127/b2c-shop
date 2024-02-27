@@ -57,6 +57,48 @@
       "when": 1708690874056,
       "tag": "0007_nebulous_blue_blade",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1708923539787,
+      "tag": "0008_funny_nocturne",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1709014924656,
+      "tag": "0009_clever_tomorrow_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1709015455226,
+      "tag": "0010_gigantic_dark_beast",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1709015596615,
+      "tag": "0011_dizzy_domino",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1709015961164,
+      "tag": "0012_sweet_stephen_strange",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1709016222850,
+      "tag": "0013_nasty_calypso",
+      "breakpoints": true
     }
   ]
 }

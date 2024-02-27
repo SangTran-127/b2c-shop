@@ -27,7 +27,7 @@ type Menu = {
 const menu: Menu[] = [
   {
     title: "All",
-    path: "/search",
+    path: "/collection",
   },
   {
     title: "shirt",

@@ -1,4 +1,4 @@
-import { NewCategory, categories } from "@/db/schema/category";
+import { categories } from "@/db/schema/category";
 import { db } from "@/server";
 import { publicProcedure, router } from "@/server/trpc";
 

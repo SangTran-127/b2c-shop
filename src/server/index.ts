@@ -5,6 +5,7 @@ import postgres from "postgres";
 
 // import { userRouter } from "./routes/user/router";
 import { categoryRouter } from "./routes/categories";
+import { productRouter } from "./routes/products";
 
 export const client = postgres(
   "postgresql://transang:transang@localhost:5432/codergang_shop",
@@ -18,6 +19,7 @@ export const db = drizzle(client, {
 export const appRouter = router({
   // user: userRouter,
   category: categoryRouter,
+  product: productRouter,
 });
 
 migrate(db, { migrationsFolder: "drizzle" });

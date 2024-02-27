@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "massdrop-s3.imgix.net",
       },
+      {
+        protocol: "https",
+        hostname: "loremflickr.com",
+      },
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+      },
     ],
   },
 };
